@@ -11,9 +11,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background: url(images/bg-image.jpg) no-repeat;
-            background-size: cover;
+            background: url(images/bg-image.jpg) no-repeat center/cover;
             height: 100vh;
+        }
+
+        .weather-status {
+            background: rgba(0, 0, 0, 0.3);
+            width: 30%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #weather-condition {
+            text-transform: capitalize;
         }
     </style>
 </head>
@@ -29,10 +40,13 @@
             </div>
         </form>
         <div class="weather-status text-white text-center">
-            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
-            <h1>Dhaka</h1>
-            <h3><span>38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+            <img id="icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="area">City</h1>
+            <h3><span id="temp">Temperature</span>&deg;C</h3>
+            <h1 id="weather-condition" class="lead">Weather Condition</h1>
+            <hr style="background: white; width: 250px; height: 2px;">
+            <h6>Wind Speed: <span id="wind-speed">--</span>m/s</h6>
+            <h6>Humidity: <span id="humidity">--</span>g/cm<sup>3</sup></h6>
         </div>
     </div>
 
